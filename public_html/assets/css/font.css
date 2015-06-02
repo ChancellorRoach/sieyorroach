@@ -1,0 +1,39 @@
+
+@font-face {
+    font-family: "Headline";
+    font-style: normal;
+    font-weight: normal;
+    src: url("/assets/fonts/brawler/brawler-webfont.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/brawler/brawler-webfont.woff") format("woff"), url("/assets/fonts/brawler/brawler-webfont.ttf") format("truetype"), url("/assets/fonts/brawler/brawler-webfont.svg#brawlerregular") format("svg");
+}
+@font-face {
+    font-family: "fontello";
+    font-style: normal;
+    font-weight: normal;
+    src: url("/assets/fonts/fontello/fontello.eot?65723994#iefix") format("embedded-opentype"), url("/assets/fonts/fontello/fontello.woff?65723994") format("woff"), url("/assets/fonts/fontello/fontello.ttf?65723994") format("truetype"), url("/assets/fonts/fontello/fontello.svg?65723994#fontello") format("svg");
+}
+[class^="icon-"]:before, [class*=" icon-"]:before {
+    display: inline-block;
+    font-family: "fontello";
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    line-height: 1em;
+    margin-left: 0.2em;
+    margin-right: 0.2em;
+    text-align: center;
+    text-decoration: inherit;
+    text-transform: none;
+    width: 1em;
+}
+.icon-gplus:before {
+    content: "?";
+}
+.icon-facebook-rect:before {
+    content: "?";
+}
+.icon-twitter-bird:before {
+    content: "?";
+}
+.icon-linkedin-squared:before {
+    content: "?";
+}

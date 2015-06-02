@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Sieyor Roach &middot; New Music</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
+	<link href="assets/css/music.css" rel="stylesheet">
+	    <style>
+
+     /* GLOBAL STYLES
+    -------------------------------------------------- */
+    /* Padding below the footer and lighter body text */
+
+    body {
+      padding-bottom: 40px;
+      background: #1E1E1E;
+    }
+
+
+
+    /* CUSTOMIZE THE NAVBAR
+    -------------------------------------------------- */
+
+    /* Special class on .container surrounding .navbar, used for positioning it into place. */
+    .navbar-wrapper {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 10;
+      margin-top: 20px;
+      margin-bottom: -90px; /* Negative margin to pull up carousel. 90px is roughly margins and height of navbar. */
+    }
+    .navbar-wrapper .navbar {
+
+    }
+
+    /* Remove border and change up box shadow for more contrast */
+    .navbar .navbar-inner {
+      border: 0;
+      -webkit-box-shadow: 0 2px 10px rgba(0,0,0,.25);
+         -moz-box-shadow: 0 2px 10px rgba(0,0,0,.25);
+              box-shadow: 0 2px 10px rgba(0,0,0,.25);
+    }
+
+    /* Downsize the brand/project name a bit */
+    .navbar .brand {
+      padding: 14px 30px 16px; /* Increase vertical padding to match navbar links */
+      font-size: 16px;
+      font-weight: bold;
+      text-shadow: 0 -1px 0 rgba(0,0,0,.5);
+    }
+
+    /* Navbar links: increase padding for taller navbar */
+    .navbar .nav > li > a {
+      padding: 15px 20px;
+    }
+
+    /* Offset the responsive button for proper vertical alignment */
+    .navbar .btn-navbar {
+      margin-top: 10px;
+    }
+
+
+
+    /* CUSTOMIZE THE CAROUSEL
+    -------------------------------------------------- */
+
+    /* Carousel base class */
+    .carousel {
+      margin-bottom: 60px;
+    }
+
+    .carousel .container {
+      position: relative;
+      z-index: 9;
+    }
+
+    .carousel-control {
+      height: 80px;
+      margin-top: 0;
+      font-size: 120px;
+      text-shadow: 0 1px 1px rgba(0,0,0,.4);
+      background-color: transparent;
+      border: 0;
+      z-index: 10;
+    }
+
+    .carousel .item {
+      height: 500px;
+    }
+    .carousel img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      min-width: 100%;
+      height: 500px;
+    }
+
+    .carousel-caption {
+      background-color: transparent;
+      position: static;
+      max-width: 550px;
+      padding: 0 20px;
+      margin-top: 200px;
+    }
+    .carousel-caption h1,
+    .carousel-caption .lead {
+      margin: 0;
+      line-height: 1.25;
+      color: #fff;
+      text-shadow: 0 1px 1px rgba(0,0,0,.4);
+    }
+    .carousel-caption .btn {
+      margin-top: 10px;
+    }
+
+
+
+    /* MARKETING CONTENT
+    -------------------------------------------------- */
+
+    /* Center align the text within the three columns below the carousel */
+    .marketing .span4 {
+      text-align: center;
+    }
+    .marketing h2 {
+      font-weight: normal;
+    }
+    .marketing .span4 p {
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+
+	.date {
+		margin: 50px -84px;
+		text-align: left;
+		width 1000px;
+	}
+
+    /* Featurettes
+    ------------------------- */
+
+    .featurette-divider {
+      margin: 80px 0; /* Space out the Bootstrap <hr> more */
+    }
+    .featurette {
+      padding-top: 120px; /* Vertically center images part 1: add padding above and below text. */
+      overflow: hidden; /* Vertically center images part 2: clear their floats. */
+    }
+    .featurette-image {
+      margin-top: -120px; /* Vertically center images part 3: negative margin up the image the same amount of the padding to center it. */
+    }
+
+    /* Give some space on the sides of the floated elements so text doesn't run right into it. */
+    .featurette-image.pull-left {
+      margin-right: 40px;
+    }
+    .featurette-image.pull-right {
+      margin-left: 40px;
+    }
+
+    /* Thin out the marketing headings */
+    .featurette-heading {
+      font-size: 50px;
+      font-weight: 300;
+      line-height: 1;
+      letter-spacing: -1px;
+    }
+
+
+
+    /* RESPONSIVE CSS
+    -------------------------------------------------- */
+
+    @media (max-width: 979px) {
+
+      .container.navbar-wrapper {
+        margin-bottom: 0;
+        width: auto;
+      }
+      .navbar-inner {
+        border-radius: 0;
+        margin: -20px 0;
+      }
+
+      .carousel .item {
+        height: 500px;
+      }
+      .carousel img {
+        width: auto;
+        height: 500px;
+      }
+
+      .featurette {
+        height: auto;
+        padding: 0;
+      }
+      .featurette-image.pull-left,
+      .featurette-image.pull-right {
+        display: block;
+        float: none;
+        max-width: 40%;
+        margin: 0 auto 20px;
+      }
+    }
+
+
+    @media (max-width: 767px) {
+
+      .navbar-inner {
+        margin: -20px;
+      }
+
+      .carousel {
+        margin-left: -20px;
+        margin-right: -20px;
+      }
+      .carousel .container {
+
+      }
+      .carousel .item {
+        height: 300px;
+      }
+      .carousel img {
+        height: 300px;
+      }
+      .carousel-caption {
+        width: 65%;
+        padding: 0 70px;
+        margin-top: 100px;
+      }
+      .carousel-caption h1 {
+        font-size: 30px;
+      }
+      .carousel-caption .lead,
+      .carousel-caption .btn {
+        font-size: 18px;
+      }
+
+      .marketing .span4 + .span4 {
+        margin-top: 40px;
+      }
+
+      .featurette-heading {
+        font-size: 30px;
+      }
+      .featurette .lead {
+        font-size: 18px;
+        line-height: 1.5;
+      }
+    </style>
+	   <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="assets/js/html5shiv.js"></script>
+    <![endif]-->
+
+    <!-- Fav and touch icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/Cockroach_roach_kukaracha.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/Cockroach_roach_kukaracha.png">
+      <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/Cockroach_roach_kukaracha.png">
+                    <link rel="apple-touch-icon-precomposed" href="assets/ico/Cockroach_roach_kukaracha.png">
+                                   <link rel="shortcut icon" href="assets/ico/Cockroach_roach_kukaracha.png">
+</head>
+<body>
+     <!-- NAVBAR
+    ================================================== -->
+    <div class="navbar-wrapper">
+      <!-- Wrap the .navbar in .container to center it within the absolutely positioned parent. -->
+
+        <div class="navbar navbar-inverse navbar-fixed-top">
+          <div class="navbar-inner">
+            <!-- Responsive Navbar Part 1: Button for triggering responsive navbar (not covered in tutorial). Include responsive CSS to utilize. -->
+            <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="brand" href="default.html">	Sieyor Roach</a>
+            <!-- Responsive Navbar Part 2: Place all navbar contents you want collapsed withing .navbar-collapse.collapse. -->
+            <div class="nav-collapse collapse">
+              <ul class="nav">
+                <li><a href="default.html">Home</a></li>
+                <li><a href="#myModalContact" role="button"  data-toggle="modal" >Contact</a></li>
+				<li><a href="projects.html">Projects</a></li>
+				<li><a href="resume.pdf">Resume</a></li>
+                <!-- Read about Bootstrap dropdowns at http://twitter.github.com/bootstrap/javascript.html#dropdowns -->
+                <li class="dropdown active">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Media <b class="caret"></b></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="newmusic.html">Music</a></li>
+                    <li><a href="radio.html">Radio</a></li>
+                    <li class="disabled"><a href="#">Movies (Coming Soon)</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div><!--/.nav-collapse -->
+        </div><!-- /.navbar -->
+
+      </div> <!-- /.container -->
+    </div><!-- /.navbar-wrapper -->
+    <!-- Marketing messaging and featurettes
+    ================================================== -->
+	<!-- Modal Email-->
+	<div id="myModalContact" class="modal hide fade" style="width:430px" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-header">
+	<button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+	<h3 id="myModalLabel">Contact</h3>
+	</div>
+	<div class="modal-body" >
+        <div class="span4 hidden-phone">
+          <form id="contactform">
+            <fieldset>
+                <input type="text" id="Name" placeholder="Name">
+             
+                <input type="text" id="EmailFrom"  placeholder="Email">
+             
+                <textarea id="Message" rows="3" placeholder="Message..."></textarea>
+              
+                <div><button type="submit" class="btn" id="send" onClick="ajaxEmail_post()" data-dismiss="modal" aria-hidden="true"><i class="icon-envelope"></i></button></div>
+              </fieldset>
+            </form>
+            <div id="response"></div>
+            <!--<IFRAME style="display:none" name="hidden-form"></IFRAME> -->
+        </div><!-- /.span4 -->
+	</div>
+	<div class="modal-footer">
+	<button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+	</div>
+	</div>
+	
+	<center>
+		<div class="quote">
+			<p><i id="myQuote"></br></i><p>
+			<p class="textleft" id="myAuthor"></br></p>
+		</div>
+
+
+		<!--<div class="text-warning" style="	font-size: 150%;
+		margin-top: 50px;
+		text-align: left;
+		width: 1000px;
+		margin: 50px 0px;
+		border-radius:25px;
+		padding: 8px;
+		background:#1B1B1B;
+		line-height: 1.42857;">
+			<p>NOTICE: The download feature is currently unavailable due to a recent SoundCloud patch. The teams at Offliberty.com are working diligently to come up with a solution to this challenge. Be patient as this will only be a minor set back for a short period of time.</p>
+			<p> - January 5th, 2014</p>
+			</br>
+			<p><a href="http://soundpump.net">Soundpump.net</a> provides a good alternative for downloading from SoundCloud</p>
+		</div>-->
+	</center>		
+	<div class="navdiv link-row">  		
+		<ul>  			
+			<li>    				
+				<a id="previous" href="#">Previous</a>  			
+			</li>  				
+			<li>					
+				<a id="next" href="#">Next</a>  			
+			</li>    		
+		</ul>			
+	</div>
+	<div id="musicContainer">
+		<div class="progress progress-striped active" style="width: 500px; margin-left: auto; margin-right: auto;">
+			<div class="bar" style="width: 100%;"></div>
+		</div>
+	</div><!--music container-->
+      <!-- /END THE FEATURETTES -->
+      <!-- FOOTER -->	
+      <footer class="container marketing">
+		<hr class="featurette-divider">
+        <p class="pull-right"><a href="#">Back to top</a></p>		
+        <p>&copy; 2013 Sieyor T. Roach</p>
+      </footer>
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="assets/js/jquery.js"></script>
+	
+    <script src="assets/js/bootstrap-transition.js"></script>
+    <script src="assets/js/bootstrap-alert.js"></script>
+    <script src="assets/js/bootstrap-modal.js"></script>
+    <script src="assets/js/bootstrap-dropdown.js"></script>
+    <script src="assets/js/bootstrap-scrollspy.js"></script>
+    <script src="assets/js/bootstrap-tab.js"></script>
+    <script src="assets/js/bootstrap-tooltip.js"></script>
+    <script src="assets/js/bootstrap-popover.js"></script>
+    <script src="assets/js/bootstrap-button.js"></script>
+    <script src="assets/js/bootstrap-collapse.js"></script>
+    <script src="assets/js/bootstrap-carousel.js"></script>
+    <script src="assets/js/bootstrap-typeahead.js"></script>
+	<script src="assets/js/generate-music.js"></script>
+    <script type="text/javascript">
+		var reader = new XMLHttpRequest() || new ActiveXObject('MSXML2.XMLHTTP');
+		var firstView = false;
+		var myDate = new Date();
+		var startDate = new Date();
+		var offset = 0;
+		var loading;
+		myDate.setDate(myDate.getDate() - 7);
+		
+		var endDate = getMonday(myDate);
+		
+		$('#next').click(function () { 
+			console.log("next");
+			var musicObj = document.getElementById('musicContainer');
+			offset += 10;
+			musicObj.innerHTML = loading;
+			ajax_post();
+		});
+		
+		$('#previous').click(function () { 
+			console.log("previous");
+			var musicObj = document.getElementById('musicContainer');
+			if (offset !=  0){
+				offset -= 10;
+				musicObj.innerHTML = loading;
+				ajax_post()
+			}
+		});
+		
+		function displayContents(data) {
+			//if(reader.readyState==4) {
+				var el = document.getElementById('myQuote');
+				var al = document.getElementById('myAuthor');
+				var res = data.split("-");
+				el.innerHTML = res[0];
+				al.innerHTML = "	- " + res[1];
+			//}
+		}
+		
+		function ajax_post(){
+			// Create our XMLHttpRequest object
+			var hr = new XMLHttpRequest();
+			
+			
+			var curr_date = endDate.getDate();
+			var curr_month = endDate.getMonth();
+			var curr_year = endDate.getFullYear();
+			var strEndDate = curr_year + "-" + curr_month + "-" + curr_date;
+			
+			curr_date = startDate.getDate();
+			curr_month = startDate.getMonth();
+			curr_year = startDate.getFullYear();
+			var strStartDate = curr_year + "-" + curr_month + "-" + curr_date;
+			
+			console.log(strStartDate + "	" + strEndDate);
+			
+			var vars = "strStartDate="+strStartDate+"&strEndDate="+strEndDate+"&offset="+offset;
+			
+			
+			hr.open("POST", "assets/php/vars.php", true);
+			// Set content type header information for sending url encoded variables in the request
+			hr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+			// Access the onreadystatechange event for the XMLHttpRequest object
+			hr.onreadystatechange = function() {
+			
+			   if(hr.readyState == 4 && hr.status == 200) {
+					parseFile(hr.responseText);
+			   }
+			}
+			// Send the data to PHP now... and wait for response to update the status div
+			hr.send(vars); // Actually execute the request			
+			//document.getElementById("status").innerHTML = "processing...";
+		}
+		
+		function ajaxQuote_post(){
+			// Create our XMLHttpRequest object
+			var hrm = new XMLHttpRequest();
+
+			hrm.open("POST", "assets/php/quotes.php", true);
+			// Set content type header information for sending url encoded variables in the request
+			hrm.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+			// Access the onreadystatechange event for the XMLHttpRequest object
+			hrm.onreadystatechange = function() {
+			
+			   if(hrm.readyState == 4 && hrm.status == 200) {
+					displayContents(hrm.responseText);
+			   }
+			}
+			// Send the data to PHP now... and wait for response to update the status div
+			hrm.send(); // Actually execute the request
+			//document.getElementById("status").innerHTML = "processing...";
+		}
+		
+		function ajaxEmail_post(){
+			// Create our XMLHttpRequest object
+			var hr = new XMLHttpRequest();
+			var name = document.getElementById('Name').value;
+			var email = document.getElementById('EmailFrom').value;
+			var message = document.getElementById('Message').value;
+			var vars = "name="+name+"&email="+email+"&message="+message;
+
+			hr.open("POST", "assets/php/contact_2013.php", true);
+			// Set content type header information for sending url encoded variables in the request
+			hr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+			// Access the onreadystatechange event for the XMLHttpRequest object
+			hr.onreadystatechange = function() {
+			}
+			// Send the data to PHP now... and wait for response to update the status div
+			hr.send(vars); // Actually execute the request
+			//document.getElementById("status").innerHTML = "processing...";
+		}
+		
+		function parseFile(data){
+			if(reader.readyState==0) {
+				
+				var jour = null;
+				var genre = null;
+				var img = null;
+				var title = null;
+				var desc = null;
+				var socl = null;
+				var dl = null;
+				var vid = null
+				var week = null;
+				var prevWeek = -1;
+				var displayWeek = false;
+				var displayEnding = false;
+				var endDivs = false;
+				var stuff = null;
+				var insertObj = document.getElementById('musicContainer');
+
+				//var song = reader.responseText.split("--ENDSONG--");
+				var song = data.split("--ENDSONG--");
+				loading = insertObj.innerHTML;
+				insertObj.innerHTML = "";
+				for (i = 0; i < song.length-1; i++){					
+					var songParts = song[i].split('--LINE--');										
+					for (j = 0; j < songParts.length; j++) {						
+						if ((songParts[j]).indexOf('--DATE--') >= 0){
+							jour = songParts[j].split('--DATE--');
+						}else if ((songParts[j]).indexOf('--GENRE--') >= 0){
+							genre = (songParts[j]).split('--GENRE--');
+						}else if ((songParts[j]).indexOf('--IMG--') >= 0){
+							img = (songParts[j]).split('--IMG--');
+						}else if ((songParts[j]).indexOf('--TITLE--') >= 0){
+							title = (songParts[j]).split('--TITLE--');
+						}else if ((songParts[j]).indexOf('--DESC--') >= 0){
+							desc = (songParts[j]).split('--DESC--');
+						}else if ((songParts[j]).indexOf('--SOCL--') >= 0){
+							socl = (songParts[j]).split('--SOCL--');
+						}else if ((songParts[j]).indexOf('--DL--') >= 0){
+							dl = (songParts[j]).split('--DL--');
+						}else if ((songParts[j]).indexOf('--VID--') >= 0){
+							vid = (songParts[j]).split('--VID--');
+							//console.log("VID: " + vid[1]);
+						}
+					}
+					var datePart = (jour[1]).split('-');
+					var myDate = new Date();
+
+					myDate.setFullYear(datePart[0],(datePart[1])-1, datePart[2]);
+					week = (myDate).getWeek();
+					
+					//console.log("week: " + week + "  song: " + title);
+					if (week != prevWeek) {
+						displayWeek = true;
+						prevWeek = week;
+						
+						if (i != 0){
+							displayEnding = true;
+							firstView = false;
+						} else {
+							firstView = true;
+							displayEnding = false;
+						}
+						//console.log("DISPLAY ENDING: " + displayEnding);
+					} else {
+						displayWeek = false;
+						displayEnding = false;
+					}
+					if (i == song.length-2){
+						endDivs = true;
+					}
+					
+					if (stuff == null){
+						stuff = musicParser(datePart, genre[1], img[1], title[1], desc[1], socl[1], dl[1], vid[1], displayWeek, displayEnding, endDivs, firstView);
+					} else {
+						stuff = stuff + musicParser(datePart, genre[1], img[1], title[1], desc[1], socl[1], dl[1], vid[1], displayWeek, displayEnding, endDivs, firstView);
+					}					
+					
+					//insertObj.innerHTML = insertObj.innerHTML + stuff;
+					
+					
+				}
+				stuff = stuff + "	<\/div> 	<\/div>";				
+							
+				insertObj.innerHTML += stuff;				//insertObj.innerHTML = stuff;
+
+			}			
+			
+		}
+		
+		function init(){
+
+		   bode = document.body;
+			
+			ajaxQuote_post();
+		   ajax_post();
+		   
+
+
+		}
+		
+
+
+		function getItem(items) {    
+			return items[0]; 
+		}
+
+		
+      !function ($) {
+        $(function(){
+          // carousel demo
+          $('#myCarousel').carousel()
+        })
+      }(window.jQuery)
+	  window.onload =init;
+    </script>
+    <script src="assets/js/holder/holder.js"></script>
+	<!--<script type="text/javascript" src="assets/js/snowstorm.js"></script>-->
+
+</body>
+</html>

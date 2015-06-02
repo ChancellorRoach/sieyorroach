@@ -1,0 +1,129 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<script type="text/javascript">
+		<!--
+		var imgObj = null;
+		var clone = null;
+		var btn = null;
+		var bode = null;
+		var imgContainer = document.getElementById("toclone");
+
+		 //var sourceImage = document.createElement('img');
+			//sourceImage.src = "img/wallpaper-2055563.jpg";
+			//imgContainer.appendChild(sourceImage);
+
+		function init(){
+
+			imgObj = document.getElementById('myImage');
+		   imgObj.style.position= 'fixed';  
+		   //clone = imgObj.cloneNode(true);
+		   
+		   bode = document.body;
+		   console.log(Math.floor((Math.random()*bode.clientWidth)+1));
+		   imgObj.style.left = Math.floor((Math.random()*bode.clientWidth)+1) + 'px'; 
+		   imgObj.style.top = -imgObj.height + 'px'; 
+			//imgObj.addEventListener("click", clickHandler , false);		   
+
+		   for (var i=0;i<8;i++){
+				var ele;
+			//						   for(var key in ele){
+			//console.log(key + ": " + ele[key]);
+		  //}			
+				//if (i = 0){
+					ele = imgObj.cloneNode(false);
+					//ele.addEventListener("click", clickHandler , false);
+				//}else{
+				//	i = document.getElementById('toclone')[ele.length-1].cloneNode(false);
+				//}
+				ele.style.position= 'fixed'; 
+				ele.style.left = Math.floor((Math.random()*bode.clientWidth)+1) + 'px'; 
+				ele.style.top = (-imgObj.height - Math.floor((Math.random()*50)+1)) + 'px'; 
+				//ele.style.top = '0px'; 
+
+				document.getElementById("toclone").appendChild(ele);
+			}
+						//			for(var key in bode){
+						//	console.log(key + ": " + bode[key]);
+						//}
+
+		   moveRight();
+		   console.log(parseInt(imgObj.style.top.length) + " " + imgObj.height);
+		   				//console.log(parseInt(imgObj.style.top));
+
+
+
+		}
+		function moveRight(){
+			//console.log("innerWidth: " + window.innerWidth + "   PIC: " + imgObj.style.left + " WIDTH: " + imgObj.width);
+			//console.log("TOP: " + imgObj.style.top + "HEIGHT: " + imgObj.height);
+			//console.log(parseInt(imgObj.style.top.length));
+			//console.log("BODY WIDTH: " + body.clientWidth + "STYLE LEFT: " + parseInt(imgObj.style.left) + " IMG WIDTH: " + imgObj.width)
+			//if ( parseInt(imgObj.style.left) + imgObj.width >= body.clientWidth){
+			//alert("TEST");
+				//imgObj.style.left = '0px';
+				//clone.style.top = parseInt(clone.style.top) + 5 + "px";
+				var cloned = document.getElementById('toclone').childNodes;
+				//console.log("size: " + cloned.size);
+				for(i=0; i<cloned.length; i++) {
+					//alert(cloned[i].id);
+					//var ele;	
+					if(cloned[i].id == "myImage"){
+
+						//console.log("size: " + parseInt(cloned[i].style.top) + "	" + bode.height);
+						if(parseInt(cloned[i].style.top) - imgObj.width >= bode.clientWidth){
+							cloned[i].style.left = Math.floor((Math.random()*bode.clientWidth)+1) + 'px';
+							cloned[i].style.top = (-imgObj.height - Math.floor((Math.random()*50)+1)) + 'px';
+							
+							if(cloned[i].src = "assets/img/explosion.png"){
+								cloned[i].src = "assets/img/bacon.jpg";
+							}
+						} 
+							cloned[i].style.top = parseInt(cloned[i].style.top) + ((i/4)+1) + "px";
+					}
+				}
+				//imgObj.style.top = parseInt(imgObj.style.top) + 5 + "px";
+			
+				//console.log("IMG HEIGHT: " + imgObj.height + " TOP LENGTH: " + parseInt(imgObj.style.top.length));
+				//console.log(imgObj.height + parseInt(imgObj.style.top.length) + 'px');
+					//console.log(imgObj["offsetTop"] + " " + imgObj["offsetHeight"]);
+					//if(test == 0){
+
+				//test++;
+
+			//}else{
+			//	imgObj.style.left = parseInt(imgObj.style.left) + 10 + 'px';
+			//}
+			setTimeout(moveRight, 8);
+		}
+
+		function clickHandler(obj){
+			//alert(obj);
+			//var elem = document.getElementById(obj);
+			var heighty = obj.x;
+			var widthy = obj.y;
+			console.log(heighty + "	" + widthy);
+			var img1 = document.createElement("img");
+			obj.src = "assets/img/explosion.png";
+			img1.width = "75";
+
+			//obj.parentNode.removeChild(obj);
+				
+			//document.getElementById("toclone").appendChild(img1);
+			img1.x = heighty;
+			img1.y = widthy;
+		}
+		window.onload =init;
+		//-->
+		</script>
+	</head>
+	<body>
+				<!--<input id= "replace" type="button" value="I LIKE TO MOVE IT MOVE IT" onclick="moveRight();" />
+			</br>-->
+		<form id="toclone">
+
+			<img id= "myImage" src="assets/img/bacon.jpg" alt="Floating" onmousedown="clickHandler(this)" width="75";">
+
+		</form>
+	</body>
+</html>
