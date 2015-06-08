@@ -19,9 +19,21 @@ function musicParser(datePart, genre, img, title, desc, socl, dl, vid, displayWe
 	var first = curr.getDate() - curr.getDay(); // First day is the day of the month - the day of the week
 	var last = first + 6; // last day is the first day + 6
 
+	var curr2 = new Date(curr);
+	
 	var firstday = new Date(curr.setDate(first));
-	var lastday = new Date(curr.setDate(last));
+	var lastday = new Date(curr2.setDate(last));
 
+	console.log("test ");
+	console.log("datePart " + datePart);
+	console.log(datePart[0] + " " +(datePart[1])-1 + " " + datePart[2]);
+	
+	console.log("firstday " + firstday);
+	console.log("lastday " + lastday);
+	
+	console.log("firstday.getMonth() " + firstday.getMonth());
+	console.log("lastday.getMonth() " + lastday.getMonth());
+	
 	var strVar="";
 	
 	if (displayEnding == true) {

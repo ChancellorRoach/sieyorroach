@@ -5276,18 +5276,18 @@ body {
 .colour_tab ul li.electronic .selected a {
     color: #848484;
 }
-.colour_tab ul li.experimental a {
+.colour_tab ul li.dancehall a {
     border-bottom-color: #754AAB;
 }
-.colour_tab ul li.experimental .colour_tab_sub a {
+.colour_tab ul li.dancehall .colour_tab_sub a {
     border-bottom-color: #2C1C40;
 }
-.colour_tab ul li.experimental .colour_tab_sub a:hover {
+.colour_tab ul li.dancehall .colour_tab_sub a:hover {
     border-bottom-color: #754AAB;
-    color: #848484;
+    color: #754AAB;
 }
-.colour_tab ul li.experimental .selected a {
-    color: #848484;
+.colour_tab ul li.dancehall .selected a {
+    color: #754AAB;
 }
 .colour_tab ul li.pop a {
     border-bottom-color: #469E6C;
@@ -5642,28 +5642,28 @@ body {
     background-color:#469E6C !important; 
 }
 .genre-indie{
-    background-color:#48B9E3 !important; 
+    background-color:#E59400 !important; 
 }
 .genre-electronic{
-    background-color: #E99B37 !important;
+    background-color: #7B2E00 !important;
 }
-.genre-experimental{
-    background-color: #E2D059 !important;
+.genre-dancehall{
+    background-color: #204D1A !important;
 }
 .genre-pop{
-    background-color: #754AAB !important;
+    background-color: #FF69B4 !important;
 }
 .genre-mash-up{
-    background-color: #754AAB !important;
+    background-color: #E2D059 !important;
 }
 .genre-rap{
     background-color: #469E6C !important;
 }
 .genre-alternative {
-    background-color: #48B9E3 !important;
+    background-color: #E59400 !important;
 }
 .genre-blues{
-    background-color: #E59400 !important;
+    background-color: #48B9E3 !important;
 }
 .genre-rock{
     background-color: #754AAB !important;
