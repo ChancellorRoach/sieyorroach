@@ -32,7 +32,7 @@
 				 
 				//Setup our query
 				//$query = "SELECT * FROM $usertable WHERE $day <= '$strStartDate' AND $day > '$strEndDate' ORDER BY $day DESC";
-				$query = "SELECT * FROM $usertable ORDER BY $day DESC LIMIT 10 OFFSET " . $offset;
+				$query = "SELECT * FROM $usertable ORDER BY $day DESC LIMIT 9 OFFSET " . $offset;
 				 
 				//Run the Query
 				$result = mysql_query($query);
