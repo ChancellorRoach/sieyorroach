@@ -65,7 +65,11 @@ function musicParser(datePart, genre, img, title, desc, socl, dl, vid, displayWe
 	strVar += "   	        	  <div class=\"tab_area\">";
 	strVar += "  	        		<ul>";
 	strVar += "						<li class=\"second\">" + monthNamesLong[datePart[1]-1] + " " + datePart[2] + "<\/li>";
-	strVar += "						<li class=\"fifth genre-" + genre.toLowerCase() + "\">" + genre + "<\/li>";
+	if (genre == "RB"){
+		strVar += "						<li class=\"fifth genre-" + genre.toLowerCase() + "\">R&#38;B<\/li>";
+	}else{
+		strVar += "						<li class=\"fifth genre-" + genre.toLowerCase() + "\">" + genre + "<\/li>";
+	}
 	strVar += "					<\/ul>";
 	strVar += "          		<\/div>";
 	strVar += "          	<\/div>  ";
